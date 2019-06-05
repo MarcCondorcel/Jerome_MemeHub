@@ -2,7 +2,7 @@
 
 <h3> Accueil Admin </h3>
 
-<h4>Bienvenue sur la page d'administration du site Retro-Gaming</h4>
+<h4>Bienvenue sur la page d'administration du site MemeHub</h4>
 
 <?php
 

@@ -20,9 +20,10 @@ if (isset($_SESSION['admin'])) {
                         Catalogue
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="../index.php?page=photo">Photos</a>
+                        <a class="dropdown-item" href="./index.php?page=photo">Photos</a>                        
+                        <a class="dropdown-item" href="./index.php?page=template">Templates</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="../index.php?page=template">Templates</a>
+                        <a class="dropdown-item" href="./index.php?page=AjoutProduit">Ajout Produit</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -30,8 +31,6 @@ if (isset($_SESSION['admin'])) {
                         Espace membre
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="../index.php?page=espaceclient">Mon profil</a>      
-                        <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="./pages/disconnect.php">Me déconnecter</a>
                     </div>
                 </li>

@@ -14,13 +14,13 @@ if (isset($_SESSION['id_produit'])) {
     $monproduit = $produit->getProduit($_SESSION['id_produit']);
 }
 
-if (isset($_GET['supprimer'])) {
+/*if (isset($_GET['supprimer'])) {
     $commande = new CommandeDB($cnx);
     $commande_cli = $commande->getCommandeClient($_SESSION['mon_client']);
     $commande_client = $commande->getCommandeClient($_SESSION['mon_client']);
     $commande->delCommande(array("id_client" => $_SESSION['mon_client'], "id_produit" => $_SESSION['id_produit']));
     var_dump($_SESSION);
-}
+}*/
 ?>
 
 <?php
@@ -52,7 +52,7 @@ for ($i = 0; $i < sizeof($commande_client); $i++) {
                         $cmp = $cmp + ($commande_client[$i]['prix']);
                         ?></td>
                     <td>  
-                        <a href="index.php?page=mon_panier&id=<?php print $commande_client[$i]['id_produit']; ?>">
+                        <a href="index.php?page=suppression&id=<?php print $commande_client[$i]['id_produit']; ?>">
                             Supprimer du panier
                         </a>
 

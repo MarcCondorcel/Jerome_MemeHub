@@ -12,18 +12,19 @@ class ProduitDB extends Produit {
     public function addProduit($data) {
         //$_db->beginTransaction();
         try {
+            $query = "insert into produit (id_produit,type,description,stock,prix,image) values (:id_produit,:type,:description,:stock,:prix,:image)";
 
-            $query = "";
+
             $resultset = $this->_db->prepare($query);
-            $resultset->bindValue(':id_produit', $data['id_produit']);
-            $resultset->bindValue(':type', $data['type']);
-            $resultset->bindValue(':description', $data['description']);
-            $resultset->bindValue(':stock', $data['stock']);
-            $resultset->bindValue(':prix_tot', $data['prix_tot']);
-            $resultset->bindValue(':type', $data['type']);
+            $resultset->bindValue(':id_produit', $data['id_produit'], PDO::PARAM_STR);
+            $resultset->bindValue(':type', $data['type'], PDO::PARAM_STR);
+            $resultset->bindValue(':description', $data['description'], PDO::PARAM_STR);
+            $resultset->bindValue(':stock', $data['stock'], PDO::PARAM_STR);
+            $resultset->bindValue(':prix', $data['prix'], PDO::PARAM_STR);
+            $resultset->bindValue(':image', $data['image'], PDO::PARAM_STR);
             $resultset->execute();
-            $retour = $resultset->fetchColumn(0);
-            return $retour;
+            //$retour = $resultset->fetchColumn(0);
+            //return $retour;
         } catch (PDOException $e) {
             print "Echec de l'insertion " . $e->getMessage();
         }
@@ -105,6 +106,34 @@ class ProduitDB extends Produit {
             }
         }
         return $_array;
+    }
+    
+    public function updateProduit($champ, $nouveau, $id) {
+
+        try {
+            $query = "UPDATE produit set " . $champ . " = '" . $nouveau . "' where id_produit ='" . $id . "'";
+            $resultset = $this->_db->prepare($query);
+            $resultset->execute();
+        } catch (PDOException $e) {
+            print $e->getMessage();
+        }
+    }
+    
+    public function delProduit($id_produit) {
+
+        try {
+            $query = "delete from produit where id_produit = :id_produit";
+
+            var_dump($query);
+            $resultset = $this->_db->prepare($query);
+            $resultset->bindValue(':id_produit',$id_produit);
+            $resultset->execute();
+            //$retour = $resultset->fetchColumn(0);
+            //return $retour;
+        } catch (PDOException $e) {
+            print "<br/>Echec de la suppression";
+            print $e->getMessage();
+        }
     }
 }
 

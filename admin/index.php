@@ -34,7 +34,7 @@ session_start();
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <meta charset="UTF-8">
-        <title>Retro-gaming Administration</title>
+        <title>Administration MemeHub</title>
     </head>
     <body>
         <div class="container">
@@ -62,7 +62,7 @@ session_start();
                         }
                     }//fin else pas de session admin
                     $path = './pages/' . $_SESSION['page'] . '.php';
-                    print $path;
+                    //print $path;
                     if (file_exists($path)) {
                         include ($path);
                     } else {

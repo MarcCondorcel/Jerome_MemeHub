@@ -7,9 +7,9 @@ if (isset($_SESSION['id_produit'])) {
     $monproduit = $produit->getProduit($_SESSION['id_produit']);
 }
 
-if (isset($_GET['acheter'])) {
-    $commande = new CommandeDB($cnx);
-    $commande->addCommande(array("id_client" => $_SESSION['mon_client'], "id_produit" => $_SESSION['id_produit'], "prix" => $monproduit[0]['prix']));
+if (isset($_GET['supprimer'])) {
+    $produit = new produitDB($cnx);
+    $produit->delProduit($_SESSION['id_produit']);
     
     
     ?>
@@ -29,12 +29,12 @@ if (isset($_GET['acheter'])) {
                 <th scope="col">Type de produit</th>
                 <th scope="col">Description du produit </th>
                 <th scope="col">Prix</th>
-                <th scope="col">Panier</th>
+                <th scope="col">Suppression</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th scope="row"><img src="./admin/images/<?php print $monproduit[0]['image'] ?>" alt="Produit"/></th>
+                <th scope="row"><img src="./images/<?php print $monproduit[0]['image'] ?>" alt="Produit"/></th>
                 <td> <?php
                     print utf8_decode($monproduit[0]['type']);
                     ?></td>
@@ -45,9 +45,9 @@ if (isset($_GET['acheter'])) {
                     print utf8_decode($monproduit[0]['prix']);
                     ?>€</td>
                 <td>  
-                    <input type="submit" button type="button" name="acheter" id="acheter" value="Ajouter au panier" class="btn btn-secondary">&nbsp;  
+                    <input type="submit" button type="button" name="supprimer" id="supprimer" value="Supprimer" class="btn btn-secondary">&nbsp;  
 
-                    <button type="button" value="Annuler" class="btn btn-secondary" onClick="javascript:document.location.href = 'index.php?page=catalogue'" /> Retour  </button>
+                    <button type="button" value="Annuler" class="btn btn-secondary" onClick="javascript:document.location.href = 'index.php?page=photo'" /> Retour  </button>
 
                 </td>
 

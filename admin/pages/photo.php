@@ -3,7 +3,6 @@
 $info = new ProduitDB($cnx);
 $liste_produit = $info->getProduitPhoto();
 $nbrProduit = count($liste_produit);
-//var_dump($liste_photo;
 ?>
 
 </br></br>
@@ -23,7 +22,7 @@ $nbrProduit = count($liste_produit);
     for ($i = 0; $i < $nbrProduit; $i++) {
         ?>
 
-      <th scope="row"><img src="./admin/images/<?php print $liste_produit[$i]['image'] ?>" alt="Photo"/></th>
+      <th scope="row"><img src="./images/<?php print $liste_produit[$i]['image'] ?>" alt="Photo"/></th>
       <td> <?php
         print utf8_decode($liste_produit[$i]['description']);
         ?></td>
@@ -34,13 +33,13 @@ $nbrProduit = count($liste_produit);
         print utf8_decode($liste_produit[$i]['stock']);
         ?></td>
       <td>  <?php 
-          if (isset($_SESSION['client']) OR isset($_SESSION['admin'])) {
+           if (isset($_SESSION['admin'])) {
           ?>
-          <a href="index.php?page=commande&id=<?php print $liste_produit[$i]['id_produit']; ?>">
-          Ajouter au panier
+          <a href="index.php?page=SupprimerProduit&id=<?php print $liste_produit[$i]['id_produit']; ?>">
+          Supprimer
           </a>
           <?php }else{
-          print " Vous devez être connecté pour commander";
+          print " Vous devez être connecté pour Supprimer";
           }
          
         ?></td>

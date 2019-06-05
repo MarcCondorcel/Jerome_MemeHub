@@ -4,14 +4,27 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/jerom/OneDrive/Documents/NetBeansProjects/Jerome_MemeHub/pages/inscription.php</file>
-            <file>file:/C:/Users/jerom/OneDrive/Documents/NetBeansProjects/Jerome_MemeHub/admin/lib/php/classes/ProduitDB.class.php</file>
-            <file>file:/C:/Users/jerom/OneDrive/Documents/NetBeansProjects/Jerome_MemeHub/pages/espaceclient.php</file>
-            <file>file:/C:/Users/jerom/OneDrive/Documents/NetBeansProjects/Jerome_MemeHub/admin/lib/php/classes/ClientDB.class.php</file>
+            <file>file:/C:/Users/jerom/OneDrive/Documents/NetBeansProjects/Jerome_MemeHub/admin/lib/php/adm_list_include.php</file>
+            <file>file:/C:/Users/jerom/OneDrive/Documents/NetBeansProjects/Jerome_MemeHub/pages/commande.php</file>
             <file>file:/C:/Users/jerom/OneDrive/Documents/NetBeansProjects/Jerome_MemeHub/pages/imprimer.php</file>
-            <file>file:/C:/Users/jerom/OneDrive/Documents/NetBeansProjects/Jerome_MemeHub/admin/lib/php/fpdf/fpdf.php</file>
+            <file>file:/C:/Users/jerom/OneDrive/Documents/NetBeansProjects/Jerome_MemeHub/admin/lib/php/verifier_connexion.php</file>
             <file>file:/C:/Users/jerom/OneDrive/Documents/NetBeansProjects/Jerome_MemeHub/pages/mon_panier.php</file>
-            <file>file:/C:/Users/jerom/OneDrive/Documents/NetBeansProjects/Jerome_MemeHub/admin/lib/php/classes/CommandeDB.class.php</file>
+            <file>file:/C:/Users/jerom/OneDrive/Documents/NetBeansProjects/Jerome_MemeHub/admin/lib/php/PgConnect.php</file>
             <file>file:/C:/Users/jerom/OneDrive/Documents/NetBeansProjects/Jerome_MemeHub/pages/paiement.php</file>
+            <file>file:/C:/Users/jerom/OneDrive/Documents/NetBeansProjects/Jerome_MemeHub/pages/accueil.php</file>
+            <file>file:/C:/Users/jerom/OneDrive/Documents/NetBeansProjects/Jerome_MemeHub/pages/photo.php</file>
+            <file>file:/C:/Users/jerom/OneDrive/Documents/NetBeansProjects/Jerome_MemeHub/admin/lib/php/classes/ProduitDB.class.php</file>
+            <file>file:/C:/Users/jerom/OneDrive/Documents/NetBeansProjects/Jerome_MemeHub/pages/deconnexion.php</file>
+            <file>file:/C:/Users/jerom/OneDrive/Documents/NetBeansProjects/Jerome_MemeHub/pages/espaceclient.php</file>
+            <file>file:/C:/Users/jerom/OneDrive/Documents/NetBeansProjects/Jerome_MemeHub/lib/php/p_gt_menu.php</file>
+            <file>file:/C:/Users/jerom/OneDrive/Documents/NetBeansProjects/Jerome_MemeHub/pages/connexion.php</file>
+            <file>file:/C:/Users/jerom/OneDrive/Documents/NetBeansProjects/Jerome_MemeHub/admin/lib/php/classes/ClientDB.class.php</file>
+            <file>file:/C:/Users/jerom/OneDrive/Documents/NetBeansProjects/Jerome_MemeHub/admin/lib/php/fpdf/fpdf.php</file>
+            <file>file:/C:/Users/jerom/OneDrive/Documents/NetBeansProjects/Jerome_MemeHub/admin/lib/php/classes/CommandeDB.class.php</file>
+            <file>file:/C:/Users/jerom/OneDrive/Documents/NetBeansProjects/Jerome_MemeHub/lib/php/p_gt_footer.php</file>
+            <file>file:/C:/Users/jerom/OneDrive/Documents/NetBeansProjects/Jerome_MemeHub/admin/lib/php/a_menu.php</file>
+            <file>file:/C:/Users/jerom/OneDrive/Documents/NetBeansProjects/Jerome_MemeHub/pages/contact.php</file>
+            <file>file:/C:/Users/jerom/OneDrive/Documents/NetBeansProjects/Jerome_MemeHub/admin/lib/php/autoload.php</file>
         </group>
     </open-files>
 </project-private>
