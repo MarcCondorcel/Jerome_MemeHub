@@ -119,6 +119,16 @@ class ProduitDB extends Produit {
         }
     }
     
+    public function updateStock($id_produit){
+        try{
+            $query = "UPDATE produit set stock=stock-1 where id_produit=".$id_produit;
+            $resultset = $this->_db->prepare($query);
+            $resultset->execute();
+        } catch (Exception $ex) {
+
+        }
+    }
+    
     public function delProduit($id_produit) {
 
         try {

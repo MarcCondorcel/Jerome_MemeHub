@@ -10,7 +10,8 @@ if (isset($_SESSION['id_produit'])) {
 if (isset($_GET['acheter'])) {
     $commande = new CommandeDB($cnx);
     $commande->addCommande(array("id_client" => $_SESSION['mon_client'], "id_produit" => $_SESSION['id_produit'], "prix" => $monproduit[0]['prix']));
-    
+    $produit = new ProduitDB($cnx);
+    $produit->updateStock($_SESSION['id_produit']);
     
     ?>
     <meta http-equiv = "refresh": content = "2;url=index.php?page=photo">

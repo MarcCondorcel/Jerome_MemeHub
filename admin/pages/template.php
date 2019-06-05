@@ -35,7 +35,7 @@ $nbrTemplate = count($liste_template);
       <td>  <?php 
           if (isset($_SESSION['admin'])) {
           ?>
-          <a href="index.php?page=commande&id=<?php print $liste_template[$i]['id_produit']; ?>">
+          <a href="index.php?page=SupprimerProduit&id=<?php print $liste_template[$i]['id_produit']; ?>">
           Supprimer
           </a>
           <?php }else{
